@@ -23,9 +23,10 @@ class App extends React.Component {
                     {
                         //React中的列表循环有且只有map可以使用
                         //只有map才有返回值，forEach没有
-                        arr.map((item,index)=>{
-                            return <li key={index}>{item}</li>
-                        })
+                        // arr.map((item,index)=>{
+                        //     return <li key={index}>{item}</li>
+                        // })
+                        arr.map((item,index) =>  <li key={index}>{item}</li>)
                     }
                 </ul>
             </>
@@ -42,3 +43,4 @@ export default App
  * 4.html中出现{}。代表其中要写js
  * 5.其实export default也可以写到class前面
  */
+
