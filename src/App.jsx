@@ -3,21 +3,32 @@ import React from "react"
 const msg = "你好世界111"
 
 const myStyle = {backgroundColor: 'skyblue'}
-
+let flag = false;
+let arr = ['刘备', '关羽', '张飞']
 //类组件
 class App extends React.Component {
     render() {
         return (
-            <div>
+            <>
                 <h2>{msg}</h2>
+                {/* */}
                 <input type="text"/>
                 <hr/>
                 <div className="box">盒子</div>
                 <hr/>
-                <div style={myStyle}>内容内容</div>
+                <div style={myStyle}>1111</div>
                 <hr/>
-                <div style={{color:'red'}}>1111</div>
-            </div>
+                <div style={{backgroundColor: flag ? 'skyblue':'pink'}}>内容内容</div>
+                <ul>
+                    {
+                        //React中的列表循环有且只有map可以使用
+                        //只有map才有返回值，forEach没有
+                        arr.map((item,index)=>{
+                            return <li key={index}>{item}</li>
+                        })
+                    }
+                </ul>
+            </>
         )
     }
 }
