@@ -15,6 +15,8 @@ class App extends React.Component {
                 <div className="box">盒子</div>
                 <hr/>
                 <div style={myStyle}>内容内容</div>
+                <hr/>
+                <div style={{color:'red'}}>1111</div>
             </div>
         )
     }
