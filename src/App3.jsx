@@ -1,9 +1,15 @@
 import React, {Component} from 'react';
 
-class App2 extends Component {
-    state = {
-        num: 1
+class App3 extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            num: 1
+        }
     }
+    // state = {
+    //     num: 1
+    // }
     render() {
         return (
             <div>
@@ -15,7 +21,7 @@ class App2 extends Component {
     }
 }
 
-export default App2;
+export default App3;
 
 /*
 * state -> setState
