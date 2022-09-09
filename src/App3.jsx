@@ -16,8 +16,16 @@ class App3 extends Component {
                 <h2>数字为: {this.state.num}</h2>
                 {/*<button onClick={ () => this.setState({num:2}) }>累加</button>*/}
                 <button onClick={ () => this.setState({num: this.state.num + 1}) }>累加</button>
+                //this传递方式1
+                <button onClick={this.addNum.bind(this) }>累加</button>
             </div>
         );
+    }
+
+    addNum(){
+        console.log(this)
+        console.log(this.state.num)
+        this.setState({num: this.state.num+1})
     }
 }
 
