@@ -19,7 +19,6 @@ class App3 extends Component {
                 <button onClick={ () => this.setState({num: this.state.num + 1}) }>按钮 - 累加1</button>
                 {/*//this传递方式1*/}
                 <button onClick={this.addNum }>按钮 - 累加2</button>
-
                 {/*//this传递方式3*/}
                 <button onClick={() => this.addNum()}>按钮 - 累加3</button>
 
