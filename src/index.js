@@ -7,3 +7,10 @@ ReactDOM.render(
     <App/>,
     document.getElementById('root')
 )
+
+setTimeout(() => {
+    ReactDOM.render(
+        <input type="text"/>,
+        document.getElementById('root')
+    )
+}, 3000)

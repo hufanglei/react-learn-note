@@ -1,4 +1,4 @@
-import React, {useEffect,useState,useRef } from 'react';
+import React, {useEffect,useState } from 'react';
 
 function App2() {
     const [num1, setNum1] = useState(1);
@@ -12,14 +12,21 @@ function App2() {
     //检测数据更新，检测那个数据更新，就把这个变量填写到数组中
     //当要检测的是页面所有的变量，你有两个选择，一是把所有的变量都填写到数组中，
     //二是直接删掉数组
-    useEffect(()=>{
-        console.log('---挂载---')
-    });
-   //当不想检测页面中的任何数据更新，可以直接给个空数组
-    useEffect(()=>{
-        console.log('---挂载---')
-    },[]);
+   //  useEffect(()=>{
+   //      console.log('---挂载---')
+   //  });
+   // //当不想检测页面中的任何数据更新，可以直接给个空数组
+   //  useEffect(()=>{
+   //      console.log('---挂载---')
+   //  },[]);
 
+
+    //模拟beforeDestroyed,一般在这个阶段处理数据或者垃圾回收
+    useEffect(()=>{
+        return ()=>{
+            console.log('销毁阶段')
+        }
+    })
 
     return (
         <>
