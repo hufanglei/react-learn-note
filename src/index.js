@@ -1,6 +1,6 @@
 // console.log('hello world')
 import ReactDOM from 'react-dom'
-import App from "./App5";
+import App from "./App6";
 import App3 from "./App3";
 
 //ReactDOM.render(组件名称，要注入的元素)
