@@ -1,4 +1,4 @@
-import React,{useState, memo,useCallback} from 'react';
+import React,{useState, memo,useCallback, useMemo} from 'react';
 
 // function Child(){
 //     console.log(123)
@@ -21,9 +21,15 @@ const App7 = () => {
      */
 
     //[] 代表不检测更新
-    const doSth = useCallback(() =>{
-            setNum(num => num+1)
-        },[])
+    // const doSth = useCallback(() =>{
+    //         setNum(num => num+1)
+    //     },[])
+
+    //函数中返回函数：高阶函数
+    const doSth = useMemo(() =>{
+       return () => setNum(num => num+1)
+    },[])
+
     return (
         <div>
             <h3>数字为： {num}</h3>
