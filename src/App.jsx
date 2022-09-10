@@ -33,5 +33,7 @@ export default App;
  * 2. 函数式组件没有this
  * 3. 函数式组件没有state状态
  *
- * Hooks
+ * Hooks （钩子 - 生命周期函数）
+ *        - React官方提供的hook
+ *        - 开发人员自定义的hook
  */
